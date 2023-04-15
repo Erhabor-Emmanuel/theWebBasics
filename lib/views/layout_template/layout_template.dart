@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:the_basics/locator.dart';
+import 'package:the_basics/services/navigation_service.dart';
 import '../../widgets/centered view/centered_view.dart';
 import '../../widgets/navigation drawer/navigation_drawer.dart';
 import '../../widgets/navigation_bar/navigation_bar.dart';
@@ -21,9 +23,8 @@ class LayoutTemplate extends StatelessWidget {
             children: [
               const NavigatingBar(),
               Expanded(
-                child: ScreenTypeLayout(
-                  mobile: const HomeContentMobile(),
-                  desktop: const HomeContentDesktop(),
+                child: Navigator(
+                  key: locator<NavigationService>().navigatorKey,
                 ),
               ),
             ],
