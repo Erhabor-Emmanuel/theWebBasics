@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:the_basics/routing/route_names.dart';
 
 import 'navbar_item.dart';
 import 'navbar_logo.dart';
@@ -17,9 +18,9 @@ class NavigatorTabletDesktop extends StatelessWidget {
           Row(
             mainAxisSize: MainAxisSize.min,
             children: const <Widget>[
-              NavBarItem(title: 'Episodes'),
+              NavBarItem(title: 'Episodes', navigationPath: EpisodesRoute,),
               SizedBox(width: 60),
-              NavBarItem(title: 'About'),
+              NavBarItem(title: 'About', navigationPath: AboutRoute,),
             ],
           )
         ],
