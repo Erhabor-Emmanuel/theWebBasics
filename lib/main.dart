@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:the_basics/views/home/home_view.dart';
+import 'package:the_basics/views/layout_template/layout_template.dart';
 import 'locator.dart';
 
 void main() {
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: const HomeView(),
+      home: LayoutTemplate(),
     );
   }
 }
