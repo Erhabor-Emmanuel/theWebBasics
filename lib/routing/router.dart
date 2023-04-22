@@ -23,3 +23,21 @@ Route<dynamic> generateRoute(RouteSettings settings){
 PageRoute _getPageRoute(Widget child){
   return MaterialPageRoute(builder: (context)=> child);
 }
+
+class _fadeRoute extends PageRouteBuilder{
+  final Widget child;
+  _fadeRoute({required this.child}) :
+  super(
+      pageBuilder:(
+      BuildContext context,
+      Animation<double> animation,
+      Animation<double> secondaryAnimation
+      ) => child,
+      transitionsBuilder: (
+      BuildContext context,
+      Animation<double> animation,
+      Animation<double> secondaryAnimation,
+      Widget child
+      ) => FadeTransition(opacity: animation, child: child,)
+    );
+}
