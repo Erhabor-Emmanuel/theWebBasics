@@ -19,6 +19,7 @@ class NavigatedDrawer extends StatelessWidget {
       child: Column(
         children: const <Widget>[
           NavigationDrawerHeader(),
+          //BONUS: Combine the UI for the widget with the NavBarItem and make it responsive
           DrawerItem(icon: Icons.videocam, title: 'Episodes', navigationPath: EpisodesRoute,),
           DrawerItem(icon: Icons.help, title: 'About', navigationPath: AboutRoute,),
         ],
