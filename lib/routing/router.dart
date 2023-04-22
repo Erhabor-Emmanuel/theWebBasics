@@ -21,7 +21,7 @@ Route<dynamic> generateRoute(RouteSettings settings){
 }
 
 PageRoute _getPageRoute(Widget child){
-  return MaterialPageRoute(builder: (context)=> child);
+  return _fadeRoute(child: child);
 }
 
 class _fadeRoute extends PageRouteBuilder{
